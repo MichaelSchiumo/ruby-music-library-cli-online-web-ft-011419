@@ -19,6 +19,12 @@ class Song
   
   def save 
     @@all << self
-  end   
+  end
+  
+  def self.create
+    initialize
+    save
+    song = created_song
+  end 
   
 end   
