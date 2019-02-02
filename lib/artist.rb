@@ -8,6 +8,7 @@ class Artist
     @name = name 
     @@all << self 
     @songs = []
+
   end  
   
   def self.all 
@@ -36,6 +37,6 @@ class Artist
     song.artist = self unless song.artist
     songs << song unless songs.include?(song)
   end 
-    
   
+    
 end   
