@@ -1,6 +1,8 @@
 require 'pry'
 
-class MusicLibraryController 
+class MusicLibraryController
+  
+  
 
   def initialize(path = './db/mp3s')
     @path = path 
@@ -29,7 +31,16 @@ class MusicLibraryController
   end  
   
   def list_artists
-    Artist.all.sort {|a, b| a.name <=> b.name}.each_with_index {|artist, i| puts "#{i + 1}. #{artist.name} - #{artist.song.name} - #{artist.genre.name}"}
+    Artist.all.sort {|a, b| a.name <=> b.name}.each_with_index {|artist, i| puts "#{i + 1}. #{artist.name}"} 
   end  
 
+  def list_genres
+    Genre.all.sort {|a, b| a.name <=> b.name}.each_with_index {|genre,i| puts "#{i + 1}. #{genre.name} - #{genre.artist.name} - #{genre.song.name}"}
+  end  
+  
+  def list_songs_by_artist
+    puts "Please enter the name of an artist:"
+    input = gets.strip
+  end  
+  
 end
