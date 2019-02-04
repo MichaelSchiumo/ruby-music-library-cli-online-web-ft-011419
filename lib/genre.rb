@@ -29,7 +29,7 @@ class Genre
   end   
   
   def artists 
-    artists.collect {|a| a.genre}.uniq
+    songs.collect {|s| s.artist}.uniq
   end   
   
 end   
