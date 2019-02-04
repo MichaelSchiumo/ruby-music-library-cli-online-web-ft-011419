@@ -28,4 +28,8 @@ class Genre
     genre 
   end   
   
+  def artists 
+    artists.collect {|a| a.genre}.uniq
+  end   
+  
 end   
