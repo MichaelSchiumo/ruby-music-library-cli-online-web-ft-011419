@@ -1,7 +1,0 @@
-module 
-Concerns::ModuleName 
-
-  def find_by_name 
-  
-
-end 

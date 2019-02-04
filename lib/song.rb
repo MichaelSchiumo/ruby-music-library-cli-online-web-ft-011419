@@ -1,3 +1,5 @@
+require 'pry'
+
 class Song 
   
   attr_accessor :name, :artist, :genre
@@ -6,8 +8,6 @@ class Song
   
   def initialize(name, artist = nil,genre = nil)
     @name = name 
-    @@all << self 
-    #@artist = artist 
     self.artist = artist if artist
     self.genre = genre if genre
   end  
