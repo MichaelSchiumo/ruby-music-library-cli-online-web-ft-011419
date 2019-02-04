@@ -1,6 +1,6 @@
 class MusicLibraryController 
 
-  def initialize(path = nil)
+  def initialize(path = './db/mp3s')
     @path = path 
     
   end  
